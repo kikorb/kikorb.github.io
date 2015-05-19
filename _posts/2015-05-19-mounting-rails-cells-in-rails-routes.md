@@ -45,7 +45,7 @@ match "/posts" => proc { |env|
   controller = ActionController::Base.new
   controller.request = ActionDispatch::Request.new(env)
 
-  [ 200, {}, [ Cell::Rack.render_cell_for(:post, :show, controller, , controller.request.query_parameters) ]]
+  [ 200, {}, [ Cell::Rack.render_cell_for(:post, :show, controller, controller.request.query_parameters) ]]
 }
 {% endhighlight %}
 

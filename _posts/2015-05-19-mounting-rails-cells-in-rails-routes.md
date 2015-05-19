@@ -55,6 +55,12 @@ Cell::Rails inherits from Cell::Rack and Cell::Rack inherits from Cell::Base. Th
 
 This comes handy if you want to use devise in your cells, or any other helper method that requires this methods to be defined.
 
+{% highlight ruby %}
+Cell::Rack.render_cell_for(:post, :show, controller, controller.request.query_parameters)
+{% endhighlight %}
+
+With the last param (controller.request.query_parameters) for the method we are getting any paramter that you can get in the call ('/posts?locale=en') and we pass it to the cell to be able to use it as an argument later in our action. 
+
 This performs almost as fast as having a metal (we don´t pass through the application controller). This also places all the necessary logic inside the cell saving us from creating an extra controller in the application to deal with the ajax calls to update the cell.
 
 Simple clean and elegant, and all without loosing the Cell::Rails in the way.

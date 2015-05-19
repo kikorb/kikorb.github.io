@@ -19,7 +19,7 @@ Imaging a cell that renders the posts of your website scoped by the locale. You 
 
 In order to do that you will need a separate controller that gives you either the html that needs to replace the current one or the json data for you to do it in the client side.
 
-With cells you could mount the cell in the routes.rb file like the documentation specifies and be able to call that cell action directly.
+With cells you could mount the cell in the routes.rb file like the [documentation specifies](https://github.com/apotonick/cells#mountable-cells) and be able to call that cell action directly.
 
 > Cells 3.8 got rid of the ActionController dependency. This essentially means you can mount Cells to routes or use them like a Rack middleware. All you need to do is derive from Cell::Base.
 
@@ -29,10 +29,10 @@ class PostCell < Cell::Base
 end
 {% endhighlight %}
 
-In your routes.rb file, mount the cell like a Rack app.
+> In your routes.rb file, mount the cell like a Rack app.
 {% highlight ruby %}
 match "/posts" => proc { |env|
-  [ 200, {}, [ Cell::Base.render_cell_for(:post, :show) ]]
+ [ 200, {}, [ Cell::Base.render_cell_for(:post, :show) ]]
 }
 {% endhighlight %}
 
@@ -59,7 +59,7 @@ This comes handy if you want to use devise in your cells, or any other helper me
 Cell::Rack.render_cell_for(:post, :show, controller, controller.request.query_parameters)
 {% endhighlight %}
 
-With the last param (controller.request.query_parameters) for the method we are getting any paramter that you can get in the call ('/posts?locale=en') and we pass it to the cell to be able to use it as an argument later in our action. 
+With the last param (controller.request.query_parameters) for the method we are getting any paramter that you can get in the call ('/posts?locale=en') and we pass it to the cell to be able to use it as an argument later in our action.
 
 This performs almost as fast as having a metal (we don´t pass through the application controller). This also places all the necessary logic inside the cell saving us from creating an extra controller in the application to deal with the ajax calls to update the cell.
 

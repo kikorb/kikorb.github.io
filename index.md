@@ -8,5 +8,6 @@ layout: index
     <h2>
       <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
     </h2>
+    <span>{{ post.summary }}</span>
   </li>
 {% endfor %}

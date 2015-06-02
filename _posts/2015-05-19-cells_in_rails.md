@@ -3,7 +3,13 @@ layout: post
 title:  "Cells in rails"
 date:   2015-05-19 19:59:46
 categories: rails cells routes
+summary: "When I first tried the gem cells I was engaged with the idea of having components that could be reusable, self aware and isolated from the rest of my apps.
+<br/><br/>
+The idea is simple. Say you have a partial _sidebar.html that is rendered in
+different parts of your website. If this partial needs a couple of instance variables
+that had to be calculated the problem begins..."
 ---
+
 When I first tried the gem cells I was engaged with the idea of having components that could be reusable, self aware and isolated from the rest of my apps.
 
 The idea is simple. Say you have a partial _sidebar.html that is rendered in

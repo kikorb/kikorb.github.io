@@ -3,6 +3,8 @@ layout: post
 title:  "Starting a blog using jekyll!"
 date:   2015-05-19 18:59:46
 categories: jekyll update
+summary: "For a while I have been wanting to write a blog again. But using blogger was not
+the best thing for me since I wanted something a bit more technical..."
 ---
 For a while I have been wanting to write a blog again. But using blogger was not
 the best thing for me since I wanted something a bit more technical.

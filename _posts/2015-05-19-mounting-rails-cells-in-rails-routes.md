@@ -3,6 +3,7 @@ layout: post
 title:  "Mounting rails cells in rails routes"
 date:   2015-05-19 19:59:46
 categories: rails cells routes
+summary: "I am all in with rails cells, the idea is simple and clean. Modularizing and isolating are always good calls, specially in large projects. But what if you have a cell that renders a part of your application and you want to update it using ajax..."
 ---
 I am all in with rails cells, the idea is simple and clean. Modularizing and isolating are always good calls, specially in large projects. But what if you have a cell that renders a part of your application and you want to update it using ajax.
 

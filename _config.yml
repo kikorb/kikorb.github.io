@@ -6,7 +6,7 @@ description: >
   my projects, the things I think might be usefull for anyone and that stuff
   I will like to read 5 years from now.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://kikorb.com" # the base hostname & protocol for your site
+url: "http://blog.kikorb.com" # the base hostname & protocol for your site
 
 twitter_username: kikoruiz
 github_username:  kikorb
